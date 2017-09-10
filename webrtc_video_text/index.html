@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Khoa Pham WebRTC</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<meta http-equiv="Content-Language" content="en-us"> 
+		<link href="fancy.css" rel="stylesheet" type="text/css">
+        <script src="jquery.js"></script>
+        <script src="peer.js"></script>
+        <script src="socket.io.js"></script>
+    </head>
+    <body>
+        <div id="div-chat">
+            <p>Online user:</p>
+            <ul id="ulUser">
+            </ul>
+            <h3 id="my-peer">Your Id: </h3>
+            <video id="localStream" width="300" controls></video>
+            <br /><br />
+            <video id="remoteStream" width="300" controls></video>
+            <br /><br />
+            <input type="text" id="remoteId" placeholder="Remote ID">
+            <button id="btnCall">Call</button>
+        </div>
+        <div id="div-dang-ky">
+            <br /><br />
+            <input type="text" id="txtUsername" placeholder="Enter your username">
+            <button id="btnSignUp">Sign Up</button>
+        </div>
+		
+		 <div id="actions">
+    Your PeerJS ID is <span id="pid"></span><br>
+    Connect to a peer: <input type="text" id="rid" placeholder="Someone else's id"><input class="button" type="button" value="Connect" id="connect"><br><br>
+
+    <form id="send">
+      <input type="text" id="text" placeholder="Enter message"><input class="button" type="submit" value="Send to selected peers">
+    </form>
+    <button id="close">Close selected connections</button>
+  </div>
+
+  <div id="wrap"><div id="connections"><span class="filler">You have not yet
+        made any connections.</span></div>
+    <div class="clear"></div></div>
+    </body>
+    <script src="main.js"></script>
+</html>
