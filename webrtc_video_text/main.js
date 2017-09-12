@@ -1,4 +1,4 @@
-const socket = io('https://stream3005.herokuapp.com/');
+const socket = io('https://remotecontrol2512.herokuapp.com/');
 
 $('#div-chat').hide();
 
@@ -60,7 +60,7 @@ function playStream(idVideoTag, stream) {
 
 const peer = new Peer({ 
     key: 'peerjs', 
-    host: 'mypeer3005.herokuapp.com', 
+    host: 'remotecontrol2512.herokuapp.com', 
     secure: true, 
     port: 443, 
    // debug: 3,	//
