@@ -1,4 +1,4 @@
-const socket = io('https://remotecontrol2512.herokuapp.com/');
+const socket = io('https://telerobotv1.herokuapp.com/');
 
 $('#div-chat').hide();
 
@@ -15,7 +15,7 @@ $.ajax({
     secure: 1
   },
   success: function (data, status) {
-    // data.d is where the iceServers object lives
+    // data.d is where the iceServers object ldives
     customConfig = data.d;
     console.log(customConfig);
   },
@@ -60,7 +60,7 @@ function playStream(idVideoTag, stream) {
 
 const peer = new Peer({ 
     key: 'peerjs', 
-    host: 'remotecontrol2512.herokuapp.com', 
+    host: 'https://telerobotv1.herokuapp.com/', 
     secure: true, 
     port: 443, 
    // debug: 3,	//
